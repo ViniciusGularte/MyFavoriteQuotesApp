@@ -1,13 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+const makeQuote = () =>{
+
+}
+
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+            <Text style={styles.title}>My Favorite Quotes</Text>
+            <TouchableOpacity style={styles.button} onPress={makeQuote}>
+            <Text  style={styles.buttonText} >Create a Quote</Text></TouchableOpacity>
       </View>
     );
   }
@@ -20,4 +24,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title:{
+    fontSize:30,
+    fontWeight:'bold',
+  },
+  button:{
+    borderRadius:10,
+    marginTop:20,
+    paddingHorizontal:40,
+    paddingVertical:10,
+    backgroundColor:'rgb(4, 108, 74)',
+  },
+  buttonText:{
+    color:'white',
+    fontSize:18,
+  }
 });
